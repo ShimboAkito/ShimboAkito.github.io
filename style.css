@@ -1,71 +1,74 @@
-/* style.css */
-
-/* 全体のスタイル */
+/* 全体の基本スタイル */
 body {
-    font-family: sans-serif;
-    background-color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* 各セクションのスタイル */
+div {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* アイコンのスタイル */
+.fa-brands {
+  margin-left: 5px;
+  color: #333;
+}
+
+/* リンク内のアイコンと文字の間隔を調整 */
+li a i {
+  margin-left: 5px;
+}
+
+/* 小さな画面（スマホなど）向けのレスポンシブ対応 */
+@media (max-width: 600px) {
+  body {
+      padding: 10px;
   }
-  
-  /* ヘッダー */
-  h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 2rem;
+
+  div {
+      padding: 15px;
   }
-  
-  /* セクション */
-  section {
-    background-color: white;
-    margin: 2rem auto;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    max-width: 80rem;
+
+  h2 {
+      font-size: 20px;
   }
-  
-  /* プロフィール画像 */
-  .profile-img {
-    display: block;
-    margin: 2rem auto;
-    border-radius: 50%;
-    max-width: 10rem;
+
+  li {
+      font-size: 16px;
   }
-  
-  /* リンク */
-  a {
-    color: #0077cc;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  /* ボタン */
-  .btn {
-    display: inline-block;
-    background-color: #0077cc;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.2s;
-  }
-  
-  .btn:hover {
-    background-color: #005faa;
-  }
-  
-  /* スマートフォンの画面幅でレイアウトを変更 */
-  @media screen and (max-width: 480px) {
-    section {
-      margin: 1rem;
-      padding: 1rem;
-    }
-  
-    .profile-img {
-      max-width: 8rem;
-    }
-  }
-  
+}
